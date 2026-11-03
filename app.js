@@ -16,7 +16,17 @@ quoteEl.textContent = 'A little coffee, a little conversation.'
 quoteEl.classList.add('featured')
 
 // part 3
-const mainPhotoEl = document.querySelector('#main-photo');
-console.log(mainPhotoEl.getAttribute('src'));
-mainPhotoEl.setAttribute('src', './assets/berry-cake.jpg');
-mainPhotoEl.setAttribute('alt', 'A berry cake served at the cafe');
+const mainPhotoEl = document.querySelector('#main-photo')
+console.log(mainPhotoEl.getAttribute('src'))
+mainPhotoEl.setAttribute('src', './assets/berry-cake.jpg')
+mainPhotoEl.setAttribute('alt', 'A berry cake served at the cafe')
+
+// part 4
+const bhColorBtnEl = document.querySelector('#bg-color-btn')
+const bodyEl = document.querySelector('body')
+
+function handleBackgroundChange() {
+  bodyEl.style.backgroundColor = 'lightsteelblue'
+}
+
+bhColorBtnEl.addEventListener('click', handleBackgroundChange)
