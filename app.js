@@ -30,3 +30,28 @@ function handleBackgroundChange() {
 }
 
 bhColorBtnEl.addEventListener('click', handleBackgroundChange)
+
+// part 5
+const roseLatteStatusEl = document.querySelector('#rose-latte')
+const croissantStatusEl = document.querySelector('#croissant')
+const cheesecakeStatusEl = document.querySelector('#cheesecake')
+
+roseLatteStatusEl.textContent = 'Available'
+croissantStatusEl.textContent = 'Sold Out'
+cheesecakeStatusEl.textContent = 'Available'
+
+const roseLatteBtnEl = document.querySelector('#0')
+const croissantBtnEl = document.querySelector('#1')
+const cheesecakeBtnEl = document.querySelector('#2')
+
+roseLatteBtnEl.addEventListener('click', function () {
+  roseLatteStatusEl.textContent = 'Sold Out'
+})
+
+croissantBtnEl.addEventListener('click', function () {
+  croissantStatusEl.textContent = 'Sold Out'
+})
+
+cheesecakeBtnEl.addEventListener('click', function () {
+  cheesecakeStatusEl.textContent = 'Sold Out'
+})
