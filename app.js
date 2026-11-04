@@ -40,18 +40,22 @@ roseLatteStatusEl.textContent = 'Available'
 croissantStatusEl.textContent = 'Sold Out'
 cheesecakeStatusEl.textContent = 'Available'
 
-const roseLatteBtnEl = document.querySelector('#0')
-const croissantBtnEl = document.querySelector('#1')
-const cheesecakeBtnEl = document.querySelector('#2')
+const roseLatteBtnEl = document.getElementById('0')
+const croissantBtnEl = document.getElementById('1')
+const cheesecakeBtnEl = document.getElementById('2')
 
-roseLatteBtnEl.addEventListener('click', function () {
+function handleRoseLatteSoldOut() {
   roseLatteStatusEl.textContent = 'Sold Out'
-})
+}
 
-croissantBtnEl.addEventListener('click', function () {
+function handleCroissantSoldOut() {
   croissantStatusEl.textContent = 'Sold Out'
-})
+}
 
-cheesecakeBtnEl.addEventListener('click', function () {
+function handleCheesecakeSoldOut() {
   cheesecakeStatusEl.textContent = 'Sold Out'
-})
+}
+
+roseLatteBtnEl.addEventListener('click', handleRoseLatteSoldOut)
+croissantBtnEl.addEventListener('click', handleCroissantSoldOut)
+cheesecakeBtnEl.addEventListener('click', handleCheesecakeSoldOut)
